@@ -1,2 +1,4 @@
 *.bin
 !static/*.bin
+vmlinux.emt.uImage
+
