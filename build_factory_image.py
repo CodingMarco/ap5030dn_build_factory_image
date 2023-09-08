@@ -86,7 +86,7 @@ def main():
     final_data = header_data
     final_data, rootfs_len = append_data(final_data, rootfs_data, alignment)
     final_data, kernel_len = append_data(final_data, kernel_data, alignment)
-    final_data, uboot_len = append_data(final_data, uboot_data, alignment)
+    final_data, uboot_len = append_data(final_data, uboot_data, 1)
     final_data, ramdisk_len = append_data(final_data, ramdisk_data, alignment)
     final_data += metadata_header_data
 
