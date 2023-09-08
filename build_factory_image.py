@@ -73,7 +73,8 @@ def load_user_data(args):
 
 def append_data(original, data, alignment):
     # Align the data
-    data += b"\x00" * (alignment - ((len(original) + len(data)) % alignment))
+    if len(data) % alignment != 0:
+        data += b"\x00" * (alignment - len(data) % alignment)
 
     return original + data, len(data)
 
